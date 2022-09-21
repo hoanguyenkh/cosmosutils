@@ -16,9 +16,8 @@ import (
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
-	ibctransfertypes "github.com/cosmos/ibc-go/v2/modules/apps/transfer/types"
-	ibctypes "github.com/cosmos/ibc-go/v2/modules/core/types"
-	nfttypes "github.com/crypto-org-chain/chain-main/v3/x/nft/types"
+	ibctransfertypes "github.com/cosmos/ibc-go/v3/modules/apps/transfer/types"
+	ibctypes "github.com/cosmos/ibc-go/v3/modules/core/types"
 )
 
 func RegisterDefaultInterfaces(interfaceRegistry types.InterfaceRegistry) {
@@ -37,7 +36,6 @@ func RegisterDefaultInterfaces(interfaceRegistry types.InterfaceRegistry) {
 	vestingtypes.RegisterInterfaces(interfaceRegistry)
 	ibctypes.RegisterInterfaces(interfaceRegistry)
 	ibctransfertypes.RegisterInterfaces(interfaceRegistry)
-	nfttypes.RegisterInterfaces(interfaceRegistry)
 	authztypes.RegisterInterfaces(interfaceRegistry)
 	feegranttypes.RegisterInterfaces(interfaceRegistry)
 }
